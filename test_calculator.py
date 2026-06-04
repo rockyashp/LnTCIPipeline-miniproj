@@ -1,7 +1,9 @@
+import pytest
+
 from calculator import add
-from calculator import subtract
-from calculator import multiply
 from calculator import divide
+from calculator import multiply
+from calculator import subtract
 
 
 def test_add():
@@ -21,8 +23,5 @@ def test_divide():
 
 
 def test_divide_by_zero():
-    import pytest
-
     with pytest.raises(ValueError):
         divide(10, 0)
-        
